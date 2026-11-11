@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIMEN Brand Kit</title>
+<link rel="icon" href="icons/favicon.ico">
+<link rel="stylesheet" href="limen-brand.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--limen-font); background: var(--limen-paper); color: var(--limen-ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 48px 16px; }
+  h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: .08em; margin: 48px 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .tile { border-radius: var(--limen-radius); padding: 24px; min-height: 140px; display: flex; flex-direction: column; justify-content: space-between; }
+  .tile code { font-size: .8rem; opacity: .8; }
+  .logo { display: flex; align-items: center; justify-content: center; height: 140px; border-radius: var(--limen-radius); }
+  .logo img { max-height: 56px; max-width: 80%; }
+  .hero { padding: 56px 32px; border-radius: var(--limen-radius); }
+  .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin: 0 0 24px; }
+  pre { background: var(--limen-black); color: var(--limen-white); padding: 16px; border-radius: 12px; overflow-x: auto; font-size: .8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img src="logos/limen-wordmark-black.svg" alt="LIMEN" height="36">
+  <p>Brand kit ufficiale. Una riga nel &lt;head&gt; e hai font e colori:</p>
+  <pre>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Scanzifarm/limen-brand-kit@main/limen-brand.css"&gt;</pre>
+
+  <h2>Esempio</h2>
+  <div class="hero limen-dark">
+    <h1 class="limen-headline">Gestire l'affitto, <span class="limen-accent">senza caos.</span></h1>
+    <a class="limen-button" href="https://limen.rent/validazione-problema">Fai il questionario</a>
+  </div>
+
+  <h2>Loghi</h2>
+  <div class="grid">
+    <div class="logo" style="background:#fff"><img src="logos/limen-wordmark-black.svg" alt="Wordmark nero"></div>
+    <div class="logo" style="background:var(--limen-black)"><img src="logos/limen-wordmark-white.svg" alt="Wordmark bianco"></div>
+    <div class="logo" style="background:#fff"><img src="logos/limen-mark-black.svg" alt="Simbolo nero"></div>
+    <div class="logo" style="background:var(--limen-black)"><img src="logos/limen-mark-white.svg" alt="Simbolo bianco"></div>
+    <div class="logo" style="background:#ddd"><img src="icons/pwa-icon.svg" alt="Icona app" style="max-height:96px;border-radius:20px"></div>
+  </div>
+
+  <h2>Colori marketing</h2>
+  <div class="grid">
+    <div class="tile" style="background:#081011;color:#fff"><b>Black</b><code>--limen-black · #081011</code></div>
+    <div class="tile" style="background:#F2C94C;color:#081011"><b>Yellow</b><code>--limen-yellow · #F2C94C</code></div>
+    <div class="tile" style="background:#C8FFDC;color:#081011"><b>Mint</b><code>--limen-mint · #C8FFDC</code></div>
+    <div class="tile" style="background:#fff;color:#151515"><b>White</b><code>--limen-white · #FFFFFF</code></div>
+    <div class="tile" style="background:#151515;color:#fff"><b>Ink</b><code>--limen-ink · #151515</code></div>
+    <div class="tile" style="background:#F5F3EB;color:#151515;border:1px solid #ddd"><b>Paper</b><code>--limen-paper · #F5F3EB</code></div>
+  </div>
+
+  <h2>Colori app</h2>
+  <div class="grid">
+    <div class="tile" style="background:var(--limen-app-black);color:#fff"><b>Nero app</b><code>#090B0D</code></div>
+    <div class="tile" style="background:var(--limen-app-ice)"><b>Ghiaccio</b><code>#EEF2F4</code></div>
+    <div class="tile" style="background:var(--limen-app-success)"><b>Positivo</b><code>oklch(0.72 0.15 160)</code></div>
+    <div class="tile" style="background:var(--limen-app-alert);color:#fff"><b>Alert</b><code>oklch(0.6 0.19 25)</code></div>
+    <div class="tile" style="background:var(--limen-app-action)"><b>Azione</b><code>oklch(0.79 0.16 72)</code></div>
+    <div class="tile" style="background:var(--limen-app-verify);color:#fff"><b>Verifica</b><code>oklch(0.58 0.05 250)</code></div>
+    <div class="tile" style="background:var(--limen-app-protect)"><b>Protect</b><code>oklch(0.72 0.12 88)</code></div>
+  </div>
+
+  <h2>Font</h2>
+  <p class="limen-headline" style="font-size:2.5rem;margin:0">Manrope 800 — Aa Bb Cc 123</p>
+  <p style="font-weight:500;font-size:1.1rem">Manrope 500 — testo corrente, chiaro e leggibile.</p>
+</div>
+</body>
+</html>

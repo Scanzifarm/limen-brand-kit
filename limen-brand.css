@@ -1,0 +1,79 @@
+/*
+ * LIMEN Brand Kit — limen-brand.css
+ * Incolla in qualsiasi sito:
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Scanzifarm/limen-brand-kit@main/limen-brand.css">
+ *
+ * Due palette separate, da non mescolare:
+ *   --limen-*      → marketing / social / landing
+ *   --limen-app-*  → interfaccia dell'app (fonte: limen-connect/src/styles.css)
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* Font */
+  --limen-font: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Marketing / social (approvata, docs/brand/1-6-social-brand-kit.md) */
+  --limen-black: #081011;   /* sfondi premium */
+  --limen-yellow: #F2C94C;  /* headline, hook, CTA */
+  --limen-mint: #C8FFDC;    /* messaggi positivi, enfasi */
+  --limen-white: #FFFFFF;   /* testi su scuro */
+  --limen-ink: #151515;     /* nero editoriale per testi su chiaro */
+  --limen-paper: #F5F3EB;   /* fondo chiaro editoriale (opzionale) */
+
+  /* App (token live in OKLCH) */
+  --limen-app-black: #090B0D;
+  --limen-app-ice: #EEF2F4;
+  --limen-app-bg: oklch(0.985 0.002 220);
+  --limen-app-fg: oklch(0.16 0.008 240);
+  --limen-app-success: oklch(0.72 0.15 160);  /* menta: esito positivo */
+  --limen-app-success-soft: oklch(0.95 0.05 160);
+  --limen-app-alert: oklch(0.6 0.19 25);      /* ritardi, anomalie */
+  --limen-app-action: oklch(0.79 0.16 72);    /* serve agire */
+  --limen-app-verify: oklch(0.58 0.05 250);   /* da verificare */
+  --limen-app-protect: oklch(0.72 0.12 88);   /* solo LIMEN Protect */
+
+  /* Forme */
+  --limen-radius: 16px;
+  --limen-radius-pill: 999px;
+}
+
+/* Classi pronte (opzionali) */
+.limen-font { font-family: var(--limen-font); }
+
+.limen-dark {
+  background: var(--limen-black);
+  color: var(--limen-white);
+  font-family: var(--limen-font);
+}
+
+.limen-light {
+  background: var(--limen-paper);
+  color: var(--limen-ink);
+  font-family: var(--limen-font);
+}
+
+.limen-headline {
+  font-family: var(--limen-font);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.limen-accent { color: var(--limen-yellow); }
+
+.limen-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 0;
+  border-radius: var(--limen-radius-pill);
+  background: var(--limen-yellow);
+  color: var(--limen-black);
+  font-family: var(--limen-font);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.limen-button:hover { filter: brightness(1.05); }
